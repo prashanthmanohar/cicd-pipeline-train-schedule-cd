@@ -10,7 +10,7 @@ pipeline {
         }
         stage('DeployToStaging') {
             when {
-                branch 'master'
+                branch 'example-solution'
             }
             steps {
                 withCredentials([usernamePassword(credentialsId: 'PhysicalServer', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
